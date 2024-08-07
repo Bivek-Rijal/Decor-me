@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="keywords" content="Bonsaiplants, Bonsai trees, Buy bonsai plant">
+      <meta name="author" content="Decorme">
+      <title>Decorme</title>
+      <link rel="stylesheet" href="style.css">
+      <style>
+        .slider 
+          {
+          width: 100%;
+          height: 900px;
+          margin-bottom: 50px;
+          box-sizing: content-box;
+          background-size: auto 90%;
+          overflow: hidden; 
+        }
+
+        .img_slider
+          {
+          width: 90%;
+          height: 900px;
+          background-repeat: no-repeat;/* the background image does not repeat */
+          background-size: cover;/* makes the background image cover the entire slider */
+          background-position: bottom;
+          overflow: hidden;/* hides any content that exceeds the dimensions of the slider */
+          }
+
+        .callout{
+          display: flex;/*allowing for flexible box layout */
+          height: 20rem;
+          gap: 1.5rem;
+        }
+
+        .callout > div{
+              flex: 1;
+              border-radius: 1rem;
+              background-position: center;
+              background-repeat: no-repeat;/* the background image does not repeat */
+              background-size: auto 100%;
+              transition: all .8s cubic-bezier(.25, .4, .45, 1.4);/* shows smooth animation */
+        }
+
+        .callout > div:hover{
+          flex: 10%;
+          }
+
+      </style>
+  </head>
+    <body>
+      <div class="main_header">
+      <div class="logo-container">
+        <img src="images/logo.gif" alt="Logo" >
+      </div>
+      <header class="header_element">
+        <nav>
+          <div class="right_items">
+            <ul class="right-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Pages/Products.html">Product</a></li>
+              <li><a href="Pages/Blog.html">Blog</a></li>
+            </ul>
+          </div>
+          <div class="left_items">
+            <ul class="left-links">
+              <li><a href="Pages/Research.html">Research</a></li>
+              <li><a href="Pages/About-us.html">About-Us</a></li>
+              <li><a href="Pages/Login.html">Login</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header> 
+    </div>
+        
+      <div class="slider">
+        <div id="img_slider">
+          <img src="/images/Homepage_slider/H1.png">
+        </div>
+      </div>
+      
+      <script>
+      var images = ['/images/Homepage_slider/H2.png', '/images/Homepage_slider/H3.png', '/images/Homepage_slider/H4.png', '/images/Homepage_slider/H5.png', '/images/Homepage_slider/H6.png', '/images/Homepage_slider/H1.png'];
+      
+      var x = 0;
+      var imgs = document.getElementById('img_slider');
+      //The setInterval() calls a function at the intervals (in milliseconds). 
+      setInterval(slider, 2800);
+      
+      function slider() {
+      
+      if (x < images.length) 
+      {
+      x = x + 1;
+      } 
+      
+      else 
+      {
+      x = 1;
+      }
+      
+      
+      imgs.innerHTML = "<img src=" + images[x - 1] + ">"; /* plays the slider in loop */
+      }
+      </script>
+      <div class="banner_text">
+        <p style="font-weight: 50px">
+        Bonsai is the art of growing miniature trees in small pots or containers. These trees are trained and pruned to maintain their small size, while still maintaining the appearance of a mature tree. Bonsai can be made from a variety of tree species, including juniper, pine, and maple. The practice of bonsai originated in China and Japan, and has become popular worldwide as a hobby and form of gardening. Bonsai trees require regular care, including watering, pruning, and repotting, to maintain their shape and health.
+        </p>
+        <a href="Pages/Products.html" class="banner_button">Shop Now</a>
+      </div> <!-- banner_text-->
+    
+
+      <div class="feature_products_outer">
+        <div class="feature_products">
+          <h3 class="feature_heading">Feature Products</h3>
+          <div class="product_thumbnail">
+            <div class="product_thumbnail_inner">
+              <img src="./images/Homepage_slider/features product/F1 Cherry Blossom Bonsai Tree.png" alt="">
+                  <div class="thumbnail_title"> Cherry BlossomPlant</div>
+                  <div class="price">
+                  <strike>NPR2500</strike> NPR2200</div>
+                <div class="thumbnail_buttons_grp">
+                  <a href="#" class="buynow_btn">Buy Now</a>
+                  <a href="#" class="add_to_cart_btn">Add to Card</a>
+                </div> <!-- thumbnail_buttons_grp -->
+            </div>
+          </div> <!-- product_thumbnail -->    
+          <div class="product_thumbnail">
+            <div class="product_thumbnail_inner">
+              <img src="./images/Homepage_slider/features product/F2 Midnight.png" alt="">
+                <div class="thumbnail_title">Midnight plant</div>
+                <div class="price"><strike>NPR3000</strike> NPR2800</div>
+              <div class="thumbnail_buttons_grp">
+                <a href="#" class="buynow_btn">Buy Now</a>
+                <a href="#" class="add_to_cart_btn">Add to Card</a>
+              </div> <!-- thumbnail_buttons_grp -->
+            </div>
+          </div> <!-- product_thumbnail -->    
+          <div class="product_thumbnail">
+            <div class="product_thumbnail_inner">
+              <img src="./images/Homepage_slider/features product/F3 portulacaria-afra-bonsai.png" alt="">
+                <div class="thumbnail_title">Portulacaria Afra plant</div>
+                <div class="price"><strike>NPR2700</strike>NPR2400</div>
+                <div class="thumbnail_buttons_grp">
+                  <a href="#" class="buynow_btn">Buy Now</a>
+                  <a href="#" class="add_to_cart_btn">Add to Card</a>
+                </div> <!-- thumbnail_buttons_grp -->
+            </div>
+          </div> <!-- product_thumbnail -->    
+          <div class="product_thumbnail">
+            <div class="product_thumbnail_inner">
+              <img src="./images/Homepage_slider/features product/F4 Yakimora.png" alt="">
+                <div class="thumbnail_title">Yakimora plant</div>
+                <div class="price"><strike>NPR3200</strike> NPR3000</div>
+                <div class="thumbnail_buttons_grp">
+                  <a href="#" class="buynow_btn">Buy Now</a>
+                  <a href="#" class="add_to_cart_btn">Add to Card</a>
+                </div> <!-- thumbnail_buttons_grp -->
+            </div>
+          </div> <!-- product_thumbnail -->    
+          <div class="product_thumbnail">
+            <div class="product_thumbnail_inner">
+              <img src="./images/Homepage_slider/features product/F5 satsuki-azalea.png" alt="">
+              <div class="thumbnail_title">Satsuki Azalea plant</div>
+              <div class="price"><strike>NPR2900</strike>NPR2700</div>
+              <div class="thumbnail_buttons_grp">
+                <a href="#" class="buynow_btn">Buy Now</a>
+                <a href="#" class="add_to_cart_btn">Add to Card</a>
+              </div> <!-- thumbnail_buttons_grp -->
+            </div>
+          </div> <!-- product_thumbnail -->
+          <div class="product_thumbnail">
+            <div class="product_thumbnail_inner">
+              <img src="./images/Homepage_slider/features product/F6 azalea-bonsai-tree.png" alt="">
+              <div class="thumbnail_title">Azalea plant</div>
+              <div class="price"><strike>NPR2500</strike> NPR2200</div>
+              <div class="thumbnail_buttons_grp">
+                <a href="#" class="buynow_btn">Buy Now</a>
+                <a href="#" class="add_to_cart_btn">Add to Card</a>
+              </div> <!-- thumbnail_buttons_grp -->
+            </div>
+          </div> <!-- product_thumbnail -->
+        </div>
+      </div> <!-- feature_products_outer -->
+      <div class="callout">
+        <div style= "background-image: url('/images/footer_top/H1.png') "></div>
+        <div style= "background-image: url('/images/footer_top/H2.png') "></div>
+        <div style= "background-image: url('/images/footer_top/H3.png') "></div>
+        <div style= "background-image: url('/images/footer_top/H4.png') "></div>
+        <div style= "background-image: url('/images/footer_top/H5.png') "></div>
+        <div style= "background-image: url('/images/footer_top/H6.png') "></div>
+      </div> <!-- call out -->
+
+        <div class="footer_outer">
+          <div class="footer_top">
+              <div class="footer_column">
+                <h3 style="margin-left: 50px;">Shop</h3>
+                <ul>
+                  <li><a href="#">In Door plants</a></li>
+                  <li><a href="#">Out Door plant</a></li>
+                  <li><a href="">Trending</a></li>
+                  <li><a href="">Bundle</a></li>
+                </ul>
+              </div>
+              <div class="footer_column">
+                <h3>About</h3>
+                <ul>
+                  <li><a href="#">Plant decoration</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="">About us</a></li>
+                  <li><a href="">Location</a></li>
+                </ul>
+              </div>
+    
+              <div class="footer_column">
+                <a href="Pages/Contact-us.html" class="footer_button_lg">Contact Us </a>
+              </div>
+              
+    
+            <div class="footer_column" >
+              <h3>Join in</h3>
+              <div class="social_links">
+                <a href="#"><img src="./images/facebook.png" alt=""></a>
+                <a href="#"><img src="./images/instagramb.png" alt=""></a>
+                <a href="#"><img src="./images/youtube.png" alt=""></a>
+              </div>
+              <div class="siginup">
+                <h4>Signup by Email</h4>
+                <input type="text"> <button>Join</button>
+              </div>
+            </div>
+          </div> 
+        </div><!-- footer_top -->
+        <div class="footer_bottom">
+          <div class="footer_left"><p>Copyright ©2022 Decor me</p></div>
+          <div class="footer_right"><p><a href="#">Terms </a> | <a href="#">Privacy Policy </a> 
+            </p> 
+          </div>
+        </div> <!-- footer_bottom -->
+        <!-- botton to top-->
+        <div class bth_top> 
+          <button onclick="topFunction()" id="topBtn" title="Go to top">Top
+          </button>
+        </div>
+        
+        <script src="./script.js"></script>
+    </body>
+  </html>
